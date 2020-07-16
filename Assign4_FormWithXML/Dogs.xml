@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dogs>
+  <Dog>
+    <DogName>Chico</DogName>
+    <DogOwnerName>Pedro Ernesto</DogOwnerName>
+    <DogAge>12</DogAge>
+    <DogOwnerPhone>64776733333</DogOwnerPhone>
+  </Dog>
+
+</Dogs>
+
+      

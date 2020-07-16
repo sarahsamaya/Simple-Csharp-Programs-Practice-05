@@ -1,0 +1,110 @@
+﻿<Window x:Class="Assign4_FormWithXML.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assign4_FormWithXML"
+        mc:Ignorable="d"
+        Title="Pet Shop System" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="heading" TargetType="Label">
+            <Setter Property="Foreground" Value="#045FB4" />
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+        <Style x:Key="label" TargetType="Label">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
+
+        </Style>
+        <Style x:Key="grid1" TargetType="Grid">
+            <Setter Property="Background" Value="#F7F8E0"/>
+            <Setter Property="Margin" Value="161,5,117,40"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="grid2" TargetType="Grid">
+            <Setter Property="Background" Value="#F7F8E0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="161,2,117,40"/>
+            <Setter Property="Height" Value="80"/>
+        </Style>
+        <Style x:Key="textBlock" TargetType="TextBlock">
+            <Setter Property="Background" Value="#F7F8E0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="500"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Margin" Value="161,0,117,0"/>
+
+
+        </Style>
+        <Style x:Key="textBox" TargetType="TextBox">
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
+        </Style>
+        <Style x:Key="button" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="VerticalAlignment" Value="top"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Vertical" Grid.IsSharedSizeScope="True">
+
+        <Grid x:Name="gridDogForm" Style="{StaticResource grid1}" >
+            <Grid.RowDefinitions >
+                <RowDefinition Height="60" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="250" />
+            </Grid.ColumnDefinitions>
+
+            <Label Name="lblTitleDog" Content="Dog Form" Style="{StaticResource heading}" Grid.Row="0" Grid.Column="0" />
+
+            <Label Content="Name:" Style="{StaticResource label}" Grid.Row="1" />
+            <TextBox x:Name="txtName" Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}"  Width="240" TextChanged="txtName_TextChanged"  />
+            <Label Name="lbNameError" Foreground="Red" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" FontSize="10"/>
+
+            <Label Content="Dog's Owner:" Style="{StaticResource label}" Grid.Row="2" />
+            <TextBox x:Name="txtOwner" Grid.Column="1" Grid.Row="2" Style="{StaticResource textBox}"  Width="240" TextChanged="txtOwner_TextChanged2"/>
+            <Label Name="lbOwnerError" Foreground="Red" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" FontSize="10"/>
+
+            <Label Content="Phone's Owner:" Style="{StaticResource label}" Grid.Row="3" />
+            <TextBox x:Name="txtPhone" Grid.Column="1" Grid.Row="3" Style="{StaticResource textBox}" Width="200" TextChanged="txtPhone_TextChanged3"/>
+            <Label Name="lbPhoneError" Foreground="Red" Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" FontSize="10"/>
+
+            <Label Content="Dog Age:" Style="{StaticResource label}" Grid.Row="4" />
+            <TextBox x:Name="txtAge" Grid.Column="1" Grid.Row="4" Style="{StaticResource textBox}"  Width="50" TextChanged="txtAge_TextChanged4"/>
+            <Label Name="lbAgeError" Foreground="Red" Grid.Column="1" Grid.Row="4" VerticalAlignment="Bottom" FontSize="10"/>
+
+            <Button x:Name="btnSave" Content="Save" Style="{StaticResource button}" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0" Background="#3CB371" Margin="0,0,5,0" Click="btnSave_Click"/>
+            <Button x:Name="btnClear" Content="Clear" Style="{StaticResource button}" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="1" Background="#FFD700" Margin="5,0,0,0" Click="btnClear_Click"/>
+
+        </Grid>
+        <TextBlock Name="tbDogs" Style="{StaticResource textBlock}"/> 
+    </StackPanel>
+
+</Window>

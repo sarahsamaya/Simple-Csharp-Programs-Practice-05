@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DogList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Dogs>
+    <Dog>
+      <DogName>Chico</DogName>
+      <DogOwnerName>Sarah</DogOwnerName>
+      <DogAge>2</DogAge>
+      <DogOwnerPhone>23235555</DogOwnerPhone>
+    </Dog>
+  </Dogs>
+</DogList>
